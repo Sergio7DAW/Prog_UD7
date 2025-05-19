@@ -24,19 +24,20 @@ public class act1 {
 
         // 1. 
         System.out.write(c1);
+        System.out.write('\n');
         System.out.flush();
 
-//        // 2.
-//        System.out.print((char) c2);
-//
-//        // 3.
-//        System.out.println((char) c3);
-//
-//        // 4.
-//        System.out.printf("%c", c4);
-//        
-//           System.out.println(" ");
-//           System.out.println("------------------");
+        // 2.
+        System.out.print((char) c2);
+
+        // 3.
+        System.out.println((char) c3);
+
+        // 4.
+        System.out.printf("%c", c4);
+        
+           System.out.println(" ");
+           System.out.println("------------------");
     }
     
 }

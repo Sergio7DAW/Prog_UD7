@@ -15,11 +15,21 @@ import java.io.*;
 import java.util.*;
 
 public class act6 {
+
     public static void main(String[] args) throws IOException {
         // 1. FileOutputStream
-        FileOutputStream fos = new FileOutputStream("archivo.txt");
-        fos.write("Hola DAW".getBytes());
-        fos.close();
+
+        FileOutputStream fos = null;
+
+        try {
+            fos = new FileOutputStream("archivo.txt");
+            fos.write((byte) 'a');
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            fos.close();
+        }
 
         // 2. BufferedOutputStream
         FileOutputStream fos2 = new FileOutputStream("buffered.txt");
@@ -121,9 +131,8 @@ public class act6 {
         }
         sis.close();
         System.out.println();
-        
+
         //tods als clases pertenecen an java.io.
-        
         /*
         java.lang.Object
             └── java.io.OutputStream
@@ -148,7 +157,6 @@ public class act6 {
                     └── PipedInputStream
 
 
-        */
+         */
     }
 }
-
